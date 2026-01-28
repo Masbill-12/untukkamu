@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Playfair Display', serif;
+  background: radial-gradient(circle at top, #2b193f, #0e0b14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #f5f5f5;
+}
+
+/* START */
+.start {
+  position: fixed;
+  inset: 0;
+  background: #0e0b14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #ffc0cb;
+  z-index: 10;
+}
+
+/* CARD */
+.card {
+  width: 90%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.15);
+}
+
+.hidden { display: none; }
+
+h1 {
+    font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  color: #ffb6c1;
+  font-weight: 600;
+}
+
+/* SLIDES */
+.slides {
+  min-height: 140px;
+}
+
+.slide {
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 400;
+  display: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.slide.big {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #ffd6e7;
+}
+
+/* SCORE */
+.score {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* HEARTS */
+.bg-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  animation: float 7s linear forwards;
+  font-size: 14px;
+}
+
+@keyframes float {
+  from { transform: translateY(110vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
